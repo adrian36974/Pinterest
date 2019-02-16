@@ -121,25 +121,32 @@ class ViewController: UIViewController {
         print(email)
         print(pass)
             Auth.auth().createUser(withEmail: email, password: pass) { (data:AuthDataResult?, error) in
-                var user = data?.user
+                let user = data?.user
                 if error != nil {
-                    print(error)
+                    print(error.debugDescription)
                 }
                 
                 //succesful
-                var ref = Database.database().reference(fromURL: "https://pinterest-tecmi.firebaseio.com/")
+                let ref = Database.database().reference(fromURL: "https://pinterest-tecmi.firebaseio.com/")
                 
                 if let uid = user?.uid{
                 
-                    var usersRef = ref.child("users").child(uid)
+                    let usersRef = ref.child("users").child(uid)
                     usersRef.updateChildValues(["name" : name, "email" : email, "password": pass])
+                    
+                    //Aqui se crea
+                    let msgsRef = ref.child("message").child(uid)
+                    msgsRef.updateChildValues(["message" : "Prueba"])
+                    
+                    //Aqui se borra el child uid de message, el de "Prueba"
+                    ref.child("message").child(uid).removeValue()
+                    
                 }
             }
         }
     }
     
 }
-
 
 extension UIColor {
     
