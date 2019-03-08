@@ -11,6 +11,7 @@
 		3A306CC52203D0F000126DFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A306CC42203D0F000126DFD /* ViewController.swift */; };
 		3A306CC82203D0F000126DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A306CC62203D0F000126DFD /* Main.storyboard */; };
 		3A306CCD2203D0F200126DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A306CCB2203D0F200126DFD /* LaunchScreen.storyboard */; };
+		3A62671F2231F1AF001AC132 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A62671E2231F1AF001AC132 /* EmailViewController.swift */; };
 		3A91F8B22228BF9A003E8EC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91F8B12228BF9A003E8EC2 /* LoginViewController.swift */; };
 		3AC2166422290E8000ECCB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC2166322290E8000ECCB05 /* Assets.xcassets */; };
 		3AC2166622291E1F00ECCB05 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2166522291E1F00ECCB05 /* LogoAnimationView.swift */; };
@@ -29,6 +30,7 @@
 		3A306CC72203D0F000126DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A306CCC2203D0F200126DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A306CCE2203D0F200126DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A62671E2231F1AF001AC132 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		3A91F8B12228BF9A003E8EC2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3AC2166322290E8000ECCB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AC2166522291E1F00ECCB05 /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				3AC2166522291E1F00ECCB05 /* LogoAnimationView.swift */,
 				3AC216672229327500ECCB05 /* SplashScreen.swift */,
 				3AC21669222933F000ECCB05 /* UIView+Constraints.swift */,
+				3A62671E2231F1AF001AC132 /* EmailViewController.swift */,
 			);
 			path = Pinterest;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				3A306CC52203D0F000126DFD /* ViewController.swift in Sources */,
 				3AC2166A222933F000ECCB05 /* UIView+Constraints.swift in Sources */,
 				3AC2166622291E1F00ECCB05 /* LogoAnimationView.swift in Sources */,
+				3A62671F2231F1AF001AC132 /* EmailViewController.swift in Sources */,
 				3A306CC32203D0F000126DFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

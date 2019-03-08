@@ -54,12 +54,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard animated, let window = self.window else {
-            self.window?.rootViewController = vc
+            let nav = UINavigationController(rootViewController: vc)
+            self.window!.rootViewController = nav        
             self.window?.makeKeyAndVisible()
             return
         }
         
-        window.rootViewController = vc
+        var nav = UINavigationController(rootViewController: vc)
+        window.rootViewController = nav
         window.makeKeyAndVisible()
         UIView.transition(with: window,
                           duration: 0.3,

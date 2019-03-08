@@ -33,8 +33,5 @@ extension SplashScreen: SwiftyGifDelegate {
         let login = LoginViewController()
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.setRootViewController(login)
-        //appDelegate?.window?.rootViewController = login
-        //LogoAnimationView.isHidden = true
-        
     }
 }

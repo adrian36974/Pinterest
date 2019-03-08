@@ -18,11 +18,6 @@ class LoginViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
-        //let gif = UIImage(gifName: "pin")
-        //let gifView = UIImageView(gifImage: gif, loopCount: 3) // Use -1 for infinite loop
-        //gifView.frame = view.bounds
-        //view.addSubview(gifView)
-        
         view.addSubview(logoContainerView)
         
         logoContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -40,7 +35,7 @@ class LoginViewController: UIViewController {
         gradient = CAGradientLayer()
         gradient.frame = background.bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
-        gradient.locations = [0, 0.3, 0.4, 1]
+        gradient.locations = [0, 0, 0.4, 1]
         background.layer.mask = gradient
         
         logoContainerView.addSubview(logo)
@@ -55,10 +50,6 @@ class LoginViewController: UIViewController {
         
         tittle.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: 20).isActive = true
         tittle.widthAnchor.constraint(equalTo: logoContainerView.widthAnchor).isActive = true
-        
-        //tittle.heightAnchor.constraint(equalTo: buttonsContainerView.heightAnchor, multiplier: 1/7).isActive = true
-        
-        
         
         
         //add subview
@@ -198,7 +189,7 @@ class LoginViewController: UIViewController {
         ub.titleLabel?.font =  UIFont(name: "GillSans-SemiBold", size: 18)
         ub.layer.cornerRadius = 20
         ub.translatesAutoresizingMaskIntoConstraints = false
-        ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
+        ub.addTarget(self, action: #selector(handleButtonEmail), for: .touchUpInside)
         return ub
     }()
     
@@ -268,7 +259,7 @@ class LoginViewController: UIViewController {
         lb.text = "Si continúas, aceptas las Condiciones del servicio y la Política\nde Privacidad de Pinterest"
         lb.numberOfLines = 2;
         lb.font =  UIFont(name: "GillSans", size: 15.5)
-        //lb.font = lb.font.withSize(13.3)
+        lb.font = lb.font.withSize(13.3)
         lb.translatesAutoresizingMaskIntoConstraints = false
         return lb
     }()
@@ -302,6 +293,12 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc func handleButtonEmail(){
+        print("Email")
+        let email = EmailViewController()
+        self.navigationController?.pushViewController(email, animated: true)        
     }
     
 }
