@@ -223,7 +223,7 @@ class LoginViewController: UIViewController {
         ub.setTitleColor(.black, for: .normal)
         ub.layer.cornerRadius = 20
         ub.translatesAutoresizingMaskIntoConstraints = false
-        ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
+        ub.addTarget(self, action: #selector(handleButtonSignIn), for: .touchUpInside)
         return ub
     }()
     
@@ -297,8 +297,16 @@ class LoginViewController: UIViewController {
     
     @objc func handleButtonEmail(){
         print("Email")
-        let email = EmailViewController()
+        let email = EmailViewController()        
+        email.register = .email
         self.navigationController?.pushViewController(email, animated: true)        
+    }
+    
+    @objc func handleButtonSignIn(){
+        print("Sign In")
+        let signin = ViewController()
+        //email.register = .email
+        self.navigationController?.pushViewController(signin, animated: true)
     }
     
 }
