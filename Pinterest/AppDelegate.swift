@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         let initialViewController  = SplashScreen()
+        //let initialViewController  = HomeFeedCollectionViewController()
         let navController = UINavigationController(rootViewController: initialViewController)
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.rootViewController = navController
