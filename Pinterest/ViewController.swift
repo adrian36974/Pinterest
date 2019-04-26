@@ -153,14 +153,14 @@ class ViewController: UIViewController {
                     
                 }
                 
-                let layout = UICollectionViewFlowLayout()
-                layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-                layout.itemSize = CGSize(width: UIScreen.main.bounds.width/2, height: UIScreen.main.bounds.width/2)
-                layout.minimumInteritemSpacing = 0
-                layout.minimumLineSpacing = 0
-                let collectionView:UICollectionViewController = HomeFeedCollectionViewController.init(collectionViewLayout:layout )
+                //let layout = UICollectionViewFlowLayout()
+                //layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+                //layout.itemSize = CGSize(width: UIScreen.main.bounds.width/2, height: UIScreen.main.bounds.width/2)
+                //layout.minimumInteritemSpacing = 0
+                //layout.minimumLineSpacing = 0
+                //let collectionView:UICollectionViewController = HomeFeedCollectionViewController.init(collectionViewLayout:layout )
                 //let collectionView:UICollectionViewController = HomeFeedCollectionViewController()
-                self.navigationController?.pushViewController(collectionView, animated: true)
+                self.navigationController?.pushViewController(HomeFeedCollectionViewController(collectionViewLayout: PinterestLayout()), animated: true)
             }
         }
     }
