@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        let initialViewController  = SplashScreen()
-        //let initialViewController  = HomeFeedCollectionViewController()
+        //let initialViewController  = SplashScreen()
+        let initialViewController  = HomeFeedCollectionViewController(collectionViewLayout: PinterestLayout())
         let navController = UINavigationController(rootViewController: initialViewController)
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.rootViewController = navController

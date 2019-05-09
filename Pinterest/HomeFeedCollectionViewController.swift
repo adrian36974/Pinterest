@@ -18,6 +18,14 @@ var screenSize: CGRect!
 var screenWidth: CGFloat!
 var screenHeight: CGFloat!
 
+var statusImageView : UIImageView = {
+    let imageView = UIImageView()
+    imageView.isUserInteractionEnabled = true
+    return imageView
+}()
+
+var zoomImageView = UIImageView()
+
 let imagenes: [UIImage] = [#imageLiteral(resourceName: "pinterest")]
 
 class HomeFeedCollectionViewController: UICollectionViewController {
@@ -51,6 +59,38 @@ class HomeFeedCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Pin", for: indexPath) as! PinCell
         return cell
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Pin", for: indexPath) as! PinCell
+        
+        statusImageView = cell.imageView1
+        //zoomImageView = cell.imageView1
+        if let startingFrame = statusImageView.superview?.convert(statusImageView.frame, to: nil),let keyWindow = UIApplication.shared.keyWindow {
+            
+         
+            zoomImageView.frame = startingFrame
+            zoomImageView.isUserInteractionEnabled = true
+            zoomImageView.image = statusImageView.image
+            zoomImageView.alpha = 1
+            keyWindow.addSubview(zoomImageView)
+            
+            //let height = (self.view.frame.width / imagenes[indexPath.row].size.width ) *  imagenes[indexPath.row].size.height
+            let height = (self.view.frame.width / imagenes[indexPath.row].size.width ) *  imagenes[indexPath.row].size.height
+            UIView.animate(withDuration: 0.20, delay: 0, options: .curveEaseOut, animations: {
+                zoomImageView.frame = CGRect(x: 0, y:75, width: self.view.frame.width, height: height)
+            })
+            
+            UIView.animate(withDuration: 1, delay: 0, options: .transitionCrossDissolve, animations: {
+                zoomImageView.alpha = 0
+            })
+            
+            let details = PinDetailsController()
+            details.image = statusImageView.image
+            details.height = height
+            
+            
+            self.navigationController?.pushViewController(details, animated: true)
+        }
+    }
     
 }
 
@@ -61,8 +101,6 @@ extension HomeFeedCollectionViewController: PinterestLayoutDelegate {
         let height = (self.view.frame.width / imagenes[0].size.height) * imagenes[0].size.height
 
         //let width = (imagenes[0].size.width) * imagenes[0].size.width) / self.view.frame.height
-
-
         return height
     }
     
