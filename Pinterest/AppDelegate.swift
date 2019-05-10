@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //let initialViewController  = SplashScreen()
-        let initialViewController  = HomeFeedCollectionViewController(collectionViewLayout: PinterestLayout())
+        let initialViewController  = UploadImageVC()
+        //let initialViewController  = HomeFeedCollectionViewController(collectionViewLayout: PinterestLayout())
         let navController = UINavigationController(rootViewController: initialViewController)
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.rootViewController = navController

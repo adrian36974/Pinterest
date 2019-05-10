@@ -9,6 +9,11 @@
 import UIKit
 import Firebase
 
+var urlsList = [String]()
+var storageRef = Storage.storage().reference()
+var imagenesArray = [UIImage]()
+var messagesArray = [String]()
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -162,6 +167,9 @@ class ViewController: UIViewController {
                 //let collectionView:UICollectionViewController = HomeFeedCollectionViewController()
                 self.navigationController?.pushViewController(HomeFeedCollectionViewController(collectionViewLayout: PinterestLayout()), animated: true)
             }
+            
+            
+            
         }
     }
     

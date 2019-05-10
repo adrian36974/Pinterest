@@ -35,6 +35,9 @@ class HomeFeedCollectionViewController: UICollectionViewController {
         collectionView.backgroundColor = .white
         self.navigationItem.title = "Bienvenido a Pinterest"
         
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItems = [add]
+        
         //Titulo para el boton de retroceder
         let backButton = UIBarButtonItem()
         backButton.title = "Atras"
@@ -45,6 +48,9 @@ class HomeFeedCollectionViewController: UICollectionViewController {
             layout.delegate = self
         }
         
+    }
+    @objc func addTapped(){
+        self.navigationController?.pushViewController(UploadImageVC(), animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: screenWidth/2, height: screenWidth/2);
