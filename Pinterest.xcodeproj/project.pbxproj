@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0019AD2285FEFE00E52969 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A0019AC2285FEFE00E52969 /* Inceptionv3.mlmodel */; };
 		3A306CC32203D0F000126DFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A306CC22203D0F000126DFD /* AppDelegate.swift */; };
 		3A306CC52203D0F000126DFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A306CC42203D0F000126DFD /* ViewController.swift */; };
 		3A306CC82203D0F000126DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A306CC62203D0F000126DFD /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		3AC216682229327500ECCB05 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC216672229327500ECCB05 /* SplashScreen.swift */; };
 		3AC2166A222933F000ECCB05 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC21669222933F000ECCB05 /* UIView+Constraints.swift */; };
 		3AC2166C2229372800ECCB05 /* pin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3AC2166B2229372800ECCB05 /* pin.gif */; };
-		3AD0AC7F2285009800D59D59 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3AD0AC7E2285009800D59D59 /* Inceptionv3.mlmodel */; };
 		3AD1853322839A89005BC70B /* PinDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD1853222839A89005BC70B /* PinDetailsController.swift */; };
 		3AD185352283B002005BC70B /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD185342283B002005BC70B /* UploadImage.swift */; };
 		3ADCB43F2256E0F900D4CAF2 /* CeldaPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADCB43E2256E0F900D4CAF2 /* CeldaPin.swift */; };
@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0AE7FD34FA38FD4D89D5A75D /* Pods_Pinterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0019AC2285FEFE00E52969 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../Pinterest/Pinterest/Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		3A306CBF2203D0F000126DFD /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A306CC22203D0F000126DFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A306CC42203D0F000126DFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		3AC216672229327500ECCB05 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		3AC21669222933F000ECCB05 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		3AC2166B2229372800ECCB05 /* pin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pin.gif; sourceTree = "<group>"; };
-		3AD0AC7E2285009800D59D59 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		3AD1853222839A89005BC70B /* PinDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailsController.swift; sourceTree = "<group>"; };
 		3AD185342283B002005BC70B /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 		3ADCB43E2256E0F900D4CAF2 /* CeldaPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPin.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		3A306CC12203D0F000126DFD /* Pinterest */ = {
 			isa = PBXGroup;
 			children = (
-				3AD0AC7E2285009800D59D59 /* Inceptionv3.mlmodel */,
+				3A0019AC2285FEFE00E52969 /* Inceptionv3.mlmodel */,
 				3AC2166B2229372800ECCB05 /* pin.gif */,
 				3AC2166322290E8000ECCB05 /* Assets.xcassets */,
 				3A306CC22203D0F000126DFD /* AppDelegate.swift */,
@@ -271,7 +271,7 @@
 				3A62671F2231F1AF001AC132 /* EmailViewController.swift in Sources */,
 				3AD1853322839A89005BC70B /* PinDetailsController.swift in Sources */,
 				3A306CC32203D0F000126DFD /* AppDelegate.swift in Sources */,
-				3AD0AC7F2285009800D59D59 /* Inceptionv3.mlmodel in Sources */,
+				3A0019AD2285FEFE00E52969 /* Inceptionv3.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
